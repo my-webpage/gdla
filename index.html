@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global Distance Learning Association (GDLA)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f6f8fb;
+      color: #222;
+      line-height: 1.6;
+    }
+    a { color: #1a56db; text-decoration: none; transition: color 0.2s; }
+    a:hover, a:focus { color: #1039a6; outline: none; }
+    h1, h2, h3 { font-weight: 700; color: #02216a; margin-top: 0; }
+    h1 { font-size: 2.15rem; margin-bottom: 0.4rem; }
+    h2 { font-size: 1.45rem; border-bottom: 3px solid #194ba7; padding-bottom: 0.3rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.15rem; color: #254880; }
+    p { margin-top: 0; margin-bottom: 1.1rem; font-size: 1.04rem; }
+    ul { padding-left: 1.3rem; margin-top: 0; margin-bottom: 1.1rem; }
+    ul li { margin-bottom: 0.45rem; }
+    .container {
+      max-width: 980px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 18px rgb(30, 40, 80 / 0.09);
+    }
+    /* Header with logo and menu */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 3px 12px rgba(22,40,70,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.05rem 2.7rem 1.05rem 1.1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .navbar-logo-img {
+      width: 500px;
+      height: auto;
+      margin-right: 18px;
+      border-radius: 9px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(22,40,70,0.11);
+      padding: 2px;
+      display: block;
+    }
+    .navbar-title {
+      font-size: 1.32rem;
+      color: #08358c;
+      font-weight: bold;
+      letter-spacing: 0.015em;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.05rem;
+    }
+    .nav-links a {
+      color: #08214a;
+      background: none;
+      font-weight: 600;
+      font-size: 1.03rem;
+      padding: 0.42rem 1.05rem;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 4px;
+      letter-spacing: 0.01em;
+      transition: background-color 0.16s;
+    }
+    .nav-links a:hover, .nav-links a:focus {
+      background: #e8f1ff;
+      color: #194ba7;
+      outline: none;
+    }
+    @media (max-width: 800px) {
+      .container { padding: 0 0.7rem; }
+      .navbar { flex-direction: column; align-items: flex-start; padding: 1.1rem 1rem; }
+      .nav-links { flex-wrap: wrap; gap: 0.5rem; width: 100%; justify-content: flex-start; }
+      .navbar-logo-img { width: 54px; margin-right: 14px; }
+    }
+    main { padding: 2.3rem 0 1.5rem 0; }
+    section {
+      padding-bottom: 2.1rem;
+      border-bottom: 1px solid #e5ebf6;
+    }
+    section:last-of-type { border-bottom: none; padding-bottom: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background: #f7faff;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.82rem 1rem;
+      border-bottom: 1px solid #dde6f3;
+      text-align: left;
+      font-size: 1rem;
+      vertical-align: top;
+    }
+    th { background-color: #e0edff; color: #2a56b7; font-weight: 700; }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.68rem 2rem;
+      background: linear-gradient(90deg, #194ba7, #3d7ae6);
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.03rem;
+      margin-top: 1.05rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      text-align: center;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: linear-gradient(90deg, #3d7ae6, #194ba7);
+      outline: none;
+      text-decoration: none;
+    }
+    footer {
+      padding: 1.35rem 0 0.9rem 0;
+      background-color: #e8f0fd;
+      color: #255cb1;
+      font-size: 1rem;
+      text-align: center;
+      border-top: 2px solid #dbe5fd;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar" role="navigation" aria-label="Main">
+      <div class="nav-logo">
+        <img src="https://i.ibb.co/Kz9wshzc/GDLA.png" alt="GDLA Logo" class="navbar-logo-img" />
+      </div>
+      <div class="nav-links">
+        <a href="#about-us">About Us</a>
+        <a href="#accreditation-process">Accreditation</a>
+        <a href="#fees">Fees</a>
+        <a href="#features">Features</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#norms">Norms</a>
+        <a href="#terms-conditions">Terms</a>
+        <a href="#contact-us">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section id="about-us" tabindex="0">
+      <h2>About Us</h2>
+      <p>
+        The <strong>Global Distance Learning Association (GDLA)</strong> is a private, independent association dedicated to regulating and advocating for excellence in distance education worldwide.
+      </p>
+      <p>
+        <strong>Headquarters:</strong> Sydney, Australia<br />
+        <strong>Europe Hub:</strong> Near Kärntner Ring, 1010 Vienna, Austria
+      </p>
+      <p>
+        <strong>Mission:</strong> Empowering standards, promoting best practices, and uniting stakeholders across the distance learning sector.<br />
+        <strong>Vision:</strong> To be the trusted voice and quality benchmark in global distance learning.
+      </p>
+    </section>
+
+    <section id="accreditation-process" tabindex="0">
+      <h2>Accreditation Process</h2>
+      <p>GDLA supports institutions through a transparent, step-by-step accreditation journey to help ensure quality and credibility in distance education.</p>
+      <ol>
+        <li><strong>Eligibility Check:</strong> Confirm that your institution primarily operates in distance education and meets GDLA's baseline standards.</li>
+        <li><strong>Registration & Application:</strong> Submit an online application with institutional information and required documentation.</li>
+        <li><strong>Self-Assessment:</strong> Complete a comprehensive self-study or checklist documenting your quality measures.</li>
+        <li><strong>Review & Site Visit:</strong> Undergo desk review, potential peer evaluation, and virtual or in-person site visits.</li>
+        <li><strong>Final Decision & Reporting:</strong> Receive an accreditation report, respond to recommendations, and get official recognition when approved.</li>
+      </ol>
+      <p><em>A detailed accreditation handbook and guidelines are provided to member institutions to navigate each step effectively.</em></p>
+    </section>
+
+    <section id="fees" tabindex="0">
+      <h2>Fees</h2>
+      <p>GDLA maintains a transparent fee structure to support accreditation and membership services.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Fee (USD)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Application Processing</td>
+            <td>$500</td>
+            <td>One-time, non-refundable</td>
+          </tr>
+          <tr>
+            <td>Accreditation Review</td>
+            <td>$1,000 – $5,000</td>
+            <td>Based on institution size and scope</td>
+          </tr>
+          <tr>
+            <td>Annual Membership Dues</td>
+            <td>$300 – $5,000</td>
+            <td>Scaled by organization revenue and type</td>
+          </tr>
+          <tr>
+            <td>Re-accreditation (Every 5 years)</td>
+            <td>$800 – $3,000</td>
+            <td>Includes compliance audit and review</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><small>All fees support GDLA’s quality assurance, research, and member services.</small></p>
+    </section>
+
+    <section id="features" tabindex="0">
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Regulatory Advocacy:</strong> Actively representing members in international educational policy forums.</li>
+        <li><strong>Quality Standards Development:</strong> Tailored frameworks for distance, online, and blended learning environments.</li>
+        <li><strong>Resource Access:</strong> Providing up-to-date policy briefings, white papers, and compliance toolkits.</li>
+        <li><strong>Peer Networking:</strong> Facilitating professional communities and annual summits for cross-border exchange.</li>
+        <li><strong>Accreditation Support:</strong> Comprehensive guidance for institutions aiming to meet global education benchmarks.</li>
+      </ul>
+    </section>
+
+    <section id="benefits" tabindex="0">
+      <h2>Benefits</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Benefit</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Quality Assurance</td>
+            <td>External validation enhances institutional credibility and public trust worldwide.</td>
+          </tr>
+          <tr>
+            <td>Global Recognition</td>
+            <td>Accreditation improves student recruitment, mobility, and partnership opportunities internationally.</td>
+          </tr>
+          <tr>
+            <td>Continuous Improvement</td>
+            <td>Access to best practices, benchmarks, and ongoing improvement strategies.</td>
+          </tr>
+          <tr>
+            <td>Professional Growth</td>
+            <td>Participation in events, workshops, and knowledge sharing for staff and leadership.</td>
+          </tr>
+          <tr>
+            <td>Advocacy</td>
+            <td>Unified voice representing members to influence distance education regulations and policies.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="norms" tabindex="0">
+      <h2>Norms</h2>
+      <ul>
+        <li><strong>Integrity and Transparency:</strong> Members must adhere to ethical practices in administration, teaching, and communications.</li>
+        <li><strong>Learner Protection:</strong> Commitment to clear communication of program expectations and protection of learner rights.</li>
+        <li><strong>Data Privacy:</strong> Compliance with international data protection regulations safeguarding personal information.</li>
+        <li><strong>Quality Monitoring:</strong> Ongoing self-assessment and adherence to GDLA's rigorous standards and guidelines.</li>
+      </ul>
+    </section>
+
+    <section id="terms-conditions" tabindex="0">
+      <h2>Terms &amp; Conditions</h2>
+      <ul>
+        <li><strong>Membership Eligibility:</strong> Open to qualifying institutions, technology providers, and policy organizations engaged in distance learning.</li>
+        <li><strong>Use of Accreditation Seal:</strong> Restricted to fully accredited members; unauthorized use is prohibited.</li>
+        <li><strong>Renewal & Compliance:</strong> Accreditation is valid for five years; requires annual reporting and compliance audits.</li>
+        <li><strong>Dispute Resolution:</strong> Formal mediation handled by GDLA’s Ethics Committee addresses member grievances.</li>
+        <li><strong>Intellectual Property:</strong> GDLA resources are protected and reproduction without permission is forbidden.</li>
+      </ul>
+    </section>
+
+    <section id="contact-us" tabindex="0">
+      <h2>Contact Us</h2>
+      <p>
+        We welcome inquiries about accreditation, membership, partnerships, or general questions.
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:info@gdla.site">info@gdla.site</a><br />
+        <strong>Website:</strong> <a href="https://www.GDLA.site" target="_blank" rel="noopener">www.GDLA.site</a>
+      </p>
+      <p>
+        <strong>Sydney Office:</strong> Australia<br/>
+        <strong>Vienna Hub:</strong> Near Kärntner Ring, 1010 Vienna, Austria
+      </p>
+      <a href="mailto:info@gdla.site" class="btn-primary" aria-label="Email GDLA">Send Us an Email</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2004 Global Distance Learning Association (GDLA). All rights reserved.
+  </footer>
+</body>
+</html>

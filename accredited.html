@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GDLA Accredited Organizations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #1f2a44;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    a { transition: all 0.3s ease; }
+    h1, h2, h3 { font-weight: 600; color: #1e3a8a; }
+    h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+
+    .header-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center;
+      border-bottom: 4px solid #2563eb;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.1);
+      padding: 1rem 2.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-link {
+      color: #1f2a44 !important;
+      font-weight: 500;
+      font-size: 1.05rem;
+      padding: 0.7rem 1.3rem !important;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      background: #eff6ff;
+      color: #2563eb !important;
+      transform: translateY(-2px);
+    }
+
+    section { padding: 3rem 0; }
+    .section-icon { color: #2563eb; margin-right: 12px; }
+
+    .search-box { margin-bottom: 2rem; }
+
+    .search-box input {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-box .btn { border-radius: 8px; }
+
+    .result-box {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 1rem;
+      border-top: 3px solid #2563eb;
+    }
+
+    @media (max-width: 768px) {
+      .header-img { height: 250px; }
+      .navbar { padding: 1rem; }
+      .navbar-brand img { height: 50px; }
+      .nav-link {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem !important;
+      }
+      h2 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="https://i.ibb.co/Kz9wshzc/GDLA.png" alt="GDLA Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+
+            <!-- About Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-info-circle"></i> About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="index.html#about-us">About Us</a></li>
+                <li><a class="dropdown-item" href="index.html#benefits">Benefits</a></li>
+                <li><a class="dropdown-item" href="index.html#norms">Norms</a></li>
+              </ul>
+            </li>
+
+            <!-- Accreditation Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="accreditationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-certificate"></i> Accreditation
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="accreditationDropdown">
+                <li><a class="dropdown-item" href="index.html#accreditation-process">Process</a></li>
+                <li><a class="dropdown-item" href="accredited.html">Accredited Organizations</a></li>
+              </ul>
+            </li>
+
+            <!-- Programs & Fees -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-bars-progress"></i> Programs & Fees
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+                <li><a class="dropdown-item" href="index.html#features">Features</a></li>
+                <li><a class="dropdown-item" href="index.html#fees">Fees</a></li>
+                <li><a class="dropdown-item" href="index.html#terms-conditions">Terms & Conditions</a></li>
+              </ul>
+            </li>
+
+            <!-- Contact Menu -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact-us"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <section id="accredited-organizations" tabindex="0">
+      <div class="section-content">
+        <h2><i class="fa-solid fa-building section-icon"></i> Accredited Organizations</h2>
+        <p>Search for accredited organizations by entering their name, abbreviation, or code below.</p>
+        <div class="search-box">
+          <div class="input-group">
+            <input type="text" class="form-control" id="searchInput" placeholder="Enter keyword, abbreviation or code" aria-label="Search for accredited organization" />
+            <button class="btn btn-primary" type="button" onclick="searchOrganization()">Search</button>
+          </div>
+        </div>
+        <div id="result" class="result-box" style="display: none;">
+          <div id="resultContent"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2005 Global Distance Learning Association (GDLA). All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const organizations = [
+      { name: "International Institute of Career Progression (IICP)", location: "Pune, India", code: "GDLA/IICP/IN-0725/AC0925", short: "iicp", acNum: "ac0925" },
+      { name: "Global Academy of Business Excellence (GABE)", location: "London, UK", code: "GDLA/GABE/UK-0525/AC1025", short: "gabe", acNum: "ac1025" },
+      { name: "Asian Centre for Leadership Development (ACLD)", location: "Singapore", code: "GDLA/ACLD/SG-0325/AC0625", short: "acld", acNum: "ac0625" },
+      { name: "Euro Institute of Education & Innovation (EIEI)", location: "Berlin, Germany", code: "GDLA/EIEI/DE-0425/AC0825", short: "eiei", acNum: "ac0825" },
+      { name: "Institute of Digital Transformation (IDT)", location: "New York, USA", code: "GDLA/IDT/US-0125/AC0325", short: "idt", acNum: "ac0325" },
+      { name: "Canadian School of Applied Skills (CSAS)", location: "Toronto, Canada", code: "GDLA/CSAS/CA-0625/AC1125", short: "csas", acNum: "ac1125" },
+      { name: "National Institute for Sustainable Development (NISD)", location: "Stockholm, Sweden", code: "GDLA/NISD/SE-0225/AC0425", short: "nisd", acNum: "ac0425" },
+      { name: "Academy for Global Health Solutions (AGHS)", location: "Nairobi, Kenya", code: "GDLA/AGHS/KE-0725/AC1225", short: "aghs", acNum: "ac1225" },
+      { name: "Middle East Center for E-learning (MECE)", location: "Dubai, UAE", code: "GDLA/MECE/AE-0925/AC1325", short: "mece", acNum: "ac1325" },
+      { name: "Latin American Institute of Tech Management (LAITM)", location: "São Paulo, Brazil", code: "GDLA/LAITM/BR-0825/AC1425", short: "laitm", acNum: "ac1425" }
+    ];
+
+    function searchOrganization() {
+      const input = document.getElementById("searchInput").value.toLowerCase().trim();
+      const resultBox = document.getElementById("result");
+      const resultContent = document.getElementById("resultContent");
+
+      if (!input) {
+        resultBox.style.display = "none";
+        alert("Please enter a keyword to search.");
+        return;
+      }
+
+      const matches = organizations.filter(org =>
+        org.name.toLowerCase().includes(input) ||
+        org.short.toLowerCase().includes(input) ||
+        org.code.toLowerCase().includes(input) ||
+        org.location.toLowerCase().includes(input) ||
+        org.acNum.toLowerCase().includes(input)
+      );
+
+      if (matches.length > 0) {
+        resultContent.innerHTML = `<h3>Search Results (${matches.length})</h3>` +
+          matches.map(org => `
+            <div style="margin-bottom: 1.5rem;">
+              <p><strong>Name:</strong> ${org.name}</p>
+              <p><strong>Location:</strong> ${org.location}</p>
+              <p><strong>Accreditation Code:</strong> ${org.code}</p>
+              <hr />
+            </div>
+          `).join("");
+        resultBox.style.display = "block";
+      } else {
+        resultBox.style.display = "none";
+        alert("No matching organizations found. Try a different keyword.");
+      }
+    }
+  </script>
+</body>
+</html>
